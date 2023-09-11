@@ -13,3 +13,4 @@ More info about configuring academicpages can be found in [the guide](https://ac
 * https://github.com/academicpages/academicpages.github.io
 * academicpages.github.io
 * https://github.com/chris-angeloni/chris-angeloni.github.io 
+* https://yanweiw.github.io/
