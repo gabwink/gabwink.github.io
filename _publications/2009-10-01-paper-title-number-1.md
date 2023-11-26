@@ -1,5 +1,5 @@
 ---
-title: "Paper Title Number 1"
+title: "Achieving mouse-level strategic evasion performance using real-time computational planning"
 collection: publications
 permalink: /publication/2009-10-01-paper-title-number-1
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
@@ -10,6 +10,8 @@ citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 
 ---
 This paper is about the number 1. The number 2 is left for future work.
 
-[Download paper here](http://academicpages.github.io/files/paper1.pdf)
+[Download paper here](https://arxiv.org/abs/2211.02700)  
+[Watch supporting video here](https://www.youtube.com/watch?v=PpGYyq2HbUY)
 
-Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1).
+Recommended citation: Espinosa, G., Wink, G. E., Lai, A. T., Dombeck, D. A., & MacIver, M. A. (2022). Achieving mouse-level strategic evasion performance using real-time computational planning.
+
