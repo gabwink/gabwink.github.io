@@ -1,5 +1,5 @@
 ---
-title: "Paper Title Number 2"
+title: "A robot-rodent interaction arena with adjustable spatial complexity for ethologically relevant behavioral studies"
 collection: publications
 permalink: /publication/2024-01-01-Lai-cellworldMethods-number-2
 excerpt: ''
