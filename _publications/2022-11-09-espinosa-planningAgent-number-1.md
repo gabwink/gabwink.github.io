@@ -1,7 +1,7 @@
 ---
 title: "Achieving mouse-level strategic evasion performance using real-time computational planning"
 collection: publications
-permalink: /publication/2009-10-01-paper-title-number-1
+permalink: /publication/2022-11-09-espinosa-planningAgent-number-1
 excerpt: ''
 date: 2022-11-09
 venue: 'arXiv'
