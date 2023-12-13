@@ -4,8 +4,8 @@ excerpt: "add <br/><img src='/images/jacksim.png'>"
 collection: portfolio
 ---
 
-![gg](https://github.com/gabwink/gabwink.github.io/blob/master/images/jackinbox.gif)
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://github.com/gabwink/gabwink.github.io/raw/master/images/jackinbox.gif)
+
 ## Model of the System
 
 <br/><img src='/images/jackinbox.png' width='300px' height='200px'><br>
