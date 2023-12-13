@@ -13,23 +13,6 @@ A particle filter implemented for a differential drive vehicle subject to the dy
 
 using dt = 0.1 and process noise and measurement noise normally distributed with a variance of 0.02.
 
-### Algorithm 
-
-$X_t = []$  
-$\bar{X_t} = []$  
-**for** m = 1, ..., M **do**  
-* sample $x^{[m]}_t$ from $p(x_t|u_t,x^{[m]}_t)$  
-* $w^{[m]}_t = p(z_t|x^{[m]}_t)$
-* add the pair $(x^{[m]}_t, w^{[m]}_t)$ to $\bar{X_t}$  
-
-**end for**  
-**for** m = 1, ..., M **do**  
-* draw *i* with probability $w^{[m]}_t$ 
-* add $x^{[i]}_t$ to $X_t$ 
-
-**end for**  
-Return $X_t$
-
 ### Result
 <br/><img src='/images/particlefilter.png'>
 Figure 1: Each color represents a snapshot of the particles at a particular time. The black line is the state estimate of x and y every dt seconds.
