@@ -4,7 +4,7 @@ excerpt: "add <br/><img src='/images/jacksim.png'>"
 collection: portfolio
 ---
 
-![GIF Example](/gifs/jackinbox.gif)
+![](https://github.com/gabwink/gabwink.github.io/blob/master/images/jackinbox.gif)
 
 ## Model of the System
 
