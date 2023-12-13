@@ -3,9 +3,6 @@ title: "Mechanical System Simulation"
 excerpt: "add <br/><img src='/images/jacksim.png'>"
 collection: portfolio
 ---
-
-![Alt Text](https://github.com/gabwink/gabwink.github.io/raw/master/images/jackinbox.gif)
-
 ## Model of the System
 
 <br/><img src='/images/jackinbox.png' width='300px' height='200px'><br>
@@ -212,3 +209,6 @@ negative acceleration of 9.8 m/s.
 Another reason why the behavior of the system is reasonable is it is evident from the
 animation that when the jack collides with the box the jack exhibits a greater acceleration than
 the box. This is as expected because the jack is significantly lighter than the box. 
+
+### Simulation 
+![Alt Text](https://github.com/gabwink/gabwink.github.io/raw/master/images/jackinbox.gif)
