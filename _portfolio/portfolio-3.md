@@ -14,7 +14,7 @@ A particle filter implemented for a differential drive vehicle subject to the dy
 using dt = 0.1 and process noise and measurement noise normally distributed with a variance of 0.02.
 
 ### Result
-<br/><img src='/images/particlefilter.png'>
+<br/><img src='/images/particlefilter.png' width='300px' height='200px'><br>
 Figure 1: Each color represents a snapshot of the particles at a particular time. The black line is the state estimate of x and y every dt seconds.
 
 ### Resources 
