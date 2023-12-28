@@ -1,6 +1,6 @@
 ---
 title: "Dynamic System Simulation"
-excerpt: "add <br/><img src='/images/jacksim.png'>"
+excerpt: "add <br/><img src='/images/jacksim.png' width='300' height='200'>"
 collection: portfolio
 ---
 ## Simulation 
@@ -8,7 +8,7 @@ collection: portfolio
 
 ## Model of the System
 
-<br/><img src='/images/jackinbox.png' width='30px' height='20px'><br>
+<br/><img src='/images/jackinbox.png' width='300px' height='200px'><br>
 Figure 1. Model of the jack in a cup system with all the frames that are utilized for the project
 
 ### System Assumptions
