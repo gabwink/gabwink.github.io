@@ -4,7 +4,7 @@ excerpt: "<br/><img src='/images/jacksim.png' width='400' height='400'>"
 collection: portfolio
 ---
 ## Simulation 
-<img src="https://github.com/gabwink/gabwink.github.io/raw/master/images/jackinbox.gif" alt="Alt Text" width="300">
+<img src="https://github.com/gabwink/gabwink.github.io/raw/master/images/jackinbox.gif" alt="Alt Text" width="400">
 
 ## Model of the System
 
@@ -85,44 +85,37 @@ g_ad
 g_ae  
 #### Transformations Used to Define Impact Constraints (code: cell 6, line 1-17)
 These frames represent the jack frames {b}, {c}, {d}, and {e} relative to the box frame {E}  
-g_wE = g_wA*g_AE  
+g_wE = g_wA * g_AE  
 g_Ew  
-g_wb = g_wa*g_ab  
+g_wb = g_wa * g_ab  
 g_Eb  
-g_wc = g_wa*g_ac  
+g_wc = g_wa * g_ac  
 g_Ec  
-g_wd = g_wa*g_ad  
+g_wd = g_wa * g_ad  
 g_Ed  
-g_we = g_wa*g_ae  
+g_we = g_wa * g_ae  
 g_Ee  
 ## Calculation Steps
 ### Euler Lagrange Equations
 1. Chose the configuration q (define above).
 2. Computed the kinetic energy for each body, the jack and the box. 
-KE = Q
-R (�&)T U
-��X×X 0
-0 �[ �&
-��X×X is the inertia due to mass translation for each body. The mass for both bodies is
-described above in Table 1. � is the rotational inertia (inertia tensor). The inertia tensor is
-diagonal �\×\=diag(m,m,m, �Q,�R,�^) because for both bodies it is obtained with respect to the
-a body frame at the center of mass and with axes aligned with the principal axes of inertia. For
-the box this frame, represented in the world frame, is g_wA = g_box and for the jack this frame
-is g_wa = g_jack.
+$$
+\text{KE}=\frac{1}{2}(V^b)^T \begin{bmatrix} mI_{nxn} & 0\\ 0 & \mathbf{I} \\ \end{bmatrix} V^b
+$$
+
+$mI_{nxn}$ is the inertia due to mass translation for each body. The mass for both bodies is described above in Table 1. $\mathbf{I}$ is the rotational inertia (inertia tensor). The inertia tensor is
+diagonal $\mathbf{I} = \text{diag}(m,m,m,J_1,J_2,J_3)$ because for both bodies it is obtained with respect to the **a** body frame at the center of mass and with axes aligned with the principal axes of inertia. For the box this frame, represented in the world frame, is g_wA = g_box and for the jack this frame is g_wa = g_jack. 
+
 The system is planar, therefore, there is no rotation about the x and y principal axes.
-Therefore, �Q and �R terms of the inertia tensor do not contribute to the magnitude of kinetic
-energy and are represented as symbols in the code. The �^ term for the box and the jack was
+Therefore, $J_1$ and $J_2$ terms of the inertia tensor do not contribute to the magnitude of kinetic
+energy and are represented as symbols in the code. The $J_3$ term for the box and the jack was
 computed using the inertia_box and inertia_jack functions in the code, respectively. For the
 jack,
-�^ = (4)
-1
-2
-�
-4 (��/2)R = 1
-2 �(��/2)R
-the moment of inertia of four point masses, each with mass e
-f , about the z axis of the {a} frame.
-For the box,
+$$
+J_3 = (4)\frac{1}{2} \frac{m}{4}(Lj/2)^2= \frac{1}{2}m(Lj/2)^2
+$$
+the moment of inertia of four point masses, each with mass $\frac{m}{4}$, about the z axis of the {a} frame.
+For the box,  
 �^ = �
 12 [(2�R) − (2�R)]
 the inertia of a rectangular ring about the z axis of the frame {A} (1). Where, t is the thickness of
