@@ -1,5 +1,5 @@
 ---
-title: "Mechanical System Simulation"
+title: "Dynamic System Simulation"
 excerpt: "add <br/><img src='/images/jacksim.png'>"
 collection: portfolio
 ---
@@ -8,7 +8,7 @@ collection: portfolio
 
 ## Model of the System
 
-<br/><img src='/images/jackinbox.png' width='300px' height='200px'><br>
+<br/><img src='/images/jackinbox.png' width='30px' height='20px'><br>
 Figure 1. Model of the jack in a cup system with all the frames that are utilized for the project
 
 ### System Assumptions
@@ -213,3 +213,5 @@ Another reason why the behavior of the system is reasonable is it is evident fro
 animation that when the jack collides with the box the jack exhibits a greater acceleration than
 the box. This is as expected because the jack is significantly lighter than the box. 
 
+# Resources 
+The code for this simulation is available upon request. 
