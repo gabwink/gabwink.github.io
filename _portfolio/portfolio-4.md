@@ -1,6 +1,6 @@
 ---
 title: "Dynamic System Simulation"
-excerpt: "add <br/><img src='/images/jacksim.png' width='300' height='200'>"
+excerpt: "<br/><img src='/images/jacksim.png' width='400' height='400'>"
 collection: portfolio
 ---
 ## Simulation 
