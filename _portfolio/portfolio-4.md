@@ -34,24 +34,18 @@ $$
 
 
 ### Drawing Description
-The locations of the origins of frames {A} and {a} relative to the world frame {w} are
-represented by (�&'(, �&'() and (�+,-., �+,-.) , respectively. The origin of these frames are at
-the center of mass for the box and the jack. The � configuration variable for the box and the
-jack is the planar rotation about the frames {A} and {a} relative to the world frame. A righthanded coordinate system in the xy plane is used, therefore, the positive z axis is out of the
-page (positive rotation ccw).
-In the code symbols are used to represent the geometry and mass of the system. These
-symbols are defined in the table below.
+The locations of the origins of frames {A} and {a} relative to the world frame {w} are represented by $(x_{box}, y_{box})$ and $(x_{jack}, y_{jack})$, respectively. The origin of these frames are at
+the center of mass for the box and the jack. The $\theta$ configuration variable for the box and the jack is the planar rotation about the frames {A} and {a} relative to the world frame. A righthanded coordinate system in the xy plane is used, therefore, the positive z axis is out of the page (positive rotation ccw). In the code symbols are used to represent the geometry and mass of the system. These symbols are defined in the table below. 
+
 Table 1. Description and values of Sympy symbols used in the code
 | Symbol | Description | Value |
 |----------|----------|----------|
 | M | total mass of box | 100 kg |
 | m | total mass of jack |  1 kg |
 | s | side length of square box | 3 m |
-| Lj| length of the rod of the jack in Figure one this value
-is represented as the distance between frames {b}
-and {c} and frames {d} and {e} | 0.5 m |
+| Lj| length of the rod of the jack in Figure one this value is represented as the distance between frames {b} and {c} and frame {d} and {e} | 0.5 m |
 | g | gravity | 9.8 (m/s) |
-| s | Row 3, Col 2 | Row 3, Col 3 |
+
 
 
 
@@ -62,36 +56,45 @@ configuration of the box and jack and to change the reference frame in which a v
 is represented. The rigid body transformations are described below. In the code, the
 transformations have the same labels as the ones listed below.
 ### Subscript Naming Convention
-* The frames are label so that the second subscript is the frame expressed relative to the first subscript. For example, g_wA represents frame {A} relative to frame {w}.
-* The homogenous representation of the origin of frame {A} relative to {w} is represented in column 4.
+* The frames are labeled so that the second subscript is the frame expressed relative to the first subscript. For example, g_wA represents frame {A} relative to frame {w}.
+* The homogenous representation of the origin of frame {A} relative to {w} is represented in column 4 of the matrix.
 * The orientation of frame {A} relative to {w} is represent by SO(3), the rows and columns of g_wA that are in bold below.
-* To change the reference frame of a vector or frame in the system subscript cancelation rule is utilized. For example, if �7 is a vector expressed in {A} then, [g_wA] [��] = [��]
-multiplying by this transformation changed the reference frame of the vector from frame {A} to frame {w}.
 
-### Box Transformations (In code: cell 1, lines 169-188)
-g_wA = g_box
-g_AC
-R_AD
-g_AD
-g_AE
-### Jack Transformations (code: cell 1, lines 191-210)
-g_wa = g_jack
-g_ab
-g_ac
-g_ad
-g_ae
-### Transformations Used to Define Impact Constraints (code: cell 6, line 1-17)
-These frames represent the jack frames {b}, {c}, {d}, and {e} relative to the box frame {E}
-g_wE = g_wA*g_AE
-g_Ew
-g_wb = g_wa*g_ab
-g_Eb
-g_wc = g_wa*g_ac
-g_Ec
-g_wd = g_wa*g_ad
-g_Ed
-g_we = g_wa*g_ae
-g_Ee
+$$
+\begin{bmatrix}
+    \mathbf{cos(\theta_{box}(t))} & \mathbf{-sin(\theta_{box}(t))} & \mathbf{0} & x_{b}(t) \\
+    \mathbf{sin(\theta_{box}(t))} & \mathbf{cos(\theta_{box}(t))} & \mathbf{0} & y_{b}(t) \\
+    \mathbf{0} & \mathbf{0} & \mathbf{1} & 0 \\
+    0 & 0 & 0 & 1 \\
+\end{bmatrix}
+$$
+
+* To change the reference frame of a vector or frame in the system the subscript cancelation rule is utilized For example, if $v_A$ is a vector expressed in {A} then, $[g_{wa}][v_A] = [v_w]$ multiplying by this transformation changed the reference frame of the vector from frame {A} to frame {w}.
+
+#### Box Transformations (In code: cell 1, lines 169-188)
+g_wA = g_box  
+g_AC  
+R_AD  
+g_AD  
+g_AE  
+#### Jack Transformations (code: cell 1, lines 191-210)
+g_wa = g_jack  
+g_ab  
+g_ac  
+g_ad  
+g_ae  
+#### Transformations Used to Define Impact Constraints (code: cell 6, line 1-17)
+These frames represent the jack frames {b}, {c}, {d}, and {e} relative to the box frame {E}  
+g_wE = g_wA*g_AE  
+g_Ew  
+g_wb = g_wa*g_ab  
+g_Eb  
+g_wc = g_wa*g_ac  
+g_Ec  
+g_wd = g_wa*g_ad  
+g_Ed  
+g_we = g_wa*g_ae  
+g_Ee  
 ## Calculation Steps
 ### Euler Lagrange Equations
 1. Chose the configuration q (define above).
