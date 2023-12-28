@@ -4,7 +4,7 @@ excerpt: "<br/><img src='/images/jacksim.png' width='400' height='400'>"
 collection: portfolio
 ---
 ## Simulation 
-![Alt Text](https://github.com/gabwink/gabwink.github.io/raw/master/images/jackinbox.gif)
+![Alt Text](https://github.com/gabwink/gabwink.github.io/raw/master/images/jackinbox.gif alt="Alt Text" width="300")
 
 ## Model of the System
 
@@ -26,6 +26,9 @@ $$
     x_{box} \\
     y_{box} \\
     \theta_{box} \\
+    x_{jack} \\
+    y_{jack} \\
+    \theta_{jack} \\
 \end{bmatrix}
 $$
 
