@@ -213,5 +213,5 @@ Another reason why the behavior of the system is reasonable is it is evident fro
 animation that when the jack collides with the box the jack exhibits a greater acceleration than
 the box. This is as expected because the jack is significantly lighter than the box. 
 
-# Resources 
+## Resources 
 The code for this simulation is available upon request. 
