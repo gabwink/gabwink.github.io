@@ -16,10 +16,19 @@ Figure 1. Model of the jack in a cup system with all the frames that are utilize
 2. The mass of blue rods of the jack were assumed to be negligible. Therefore, jack is
 modeled as four identical point masses equidistant from frame {a}
 1. Both objects are modeled in gravity
-2. Assume simultaneous impact does not occur (if it does the code takes uses the first
+2. Assume simultaneous impact does not occur (if it does the code uses the first
 impact detected to solve the impact update equations).
 
 ### Configuration
+
+$$
+\begin{bmatrix}
+    x_{box} \\
+    y_{box} \\
+    \theta_{box} \\
+\end{bmatrix}
+$$
+
 
 ### Drawing Description
 The locations of the origins of frames {A} and {a} relative to the world frame {w} are
