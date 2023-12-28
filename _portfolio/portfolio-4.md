@@ -4,7 +4,7 @@ excerpt: "<br/><img src='/images/jacksim.png' width='400' height='400'>"
 collection: portfolio
 ---
 ## Simulation 
-![Alt Text](https://github.com/gabwink/gabwink.github.io/raw/master/images/jackinbox.gif alt="Alt Text" width="300")
+<img src="https://github.com/gabwink/gabwink.github.io/raw/master/images/jackinbox.gif" alt="Alt Text" width="300">
 
 ## Model of the System
 
