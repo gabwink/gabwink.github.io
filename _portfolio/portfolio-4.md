@@ -96,36 +96,35 @@ g_Ee
 ## Calculation Steps
 ### Euler Lagrange Equations
 1. Chose the configuration q (define above).
-2. Computed the kinetic energy for each body, the jack and the box.   
-   
-$$
-\text{KE}=\frac{1}{2}(V^b)^T \begin{bmatrix} mI_{nxn} & 0\\ 0 & \mathbf{I} \\ \end{bmatrix} V^b
-$$
+2. Computed the kinetic energy for each body, the jack and the box.  
 
-$mI_{nxn}$ is the inertia due to mass translation for each body. The mass for both bodies is described above in Table 1. $\mathbf{I}$ is the rotational inertia (inertia tensor). The inertia tensor is diagonal $\mathbf{I} = \text{diag}(m,m,m,J_1,J_2,J_3)$ because for both bodies it is obtained with respect to the **a** body frame at the center of mass and with axes aligned with the principal axes of inertia. For the box this frame, represented in the world frame, is g_wA = g_box and for the jack this frame is g_wa = g_jack. 
+    $$
+    \text{KE}=\frac{1}{2}(V^b)^T \begin{bmatrix} mI_{nxn} & 0\\ 0 & \mathbf{I} \\ \end{bmatrix} V^b
+    $$
+    $mI_{nxn}$ is the inertia due to mass translation for each body. The mass for both bodies is described above in Table 1. $\mathbf{I}$ is the rotational inertia (inertia tensor). The inertia tensor is diagonal $\mathbf{I} = \text{diag}(m,m,m,J_1,J_2,J_3)$ because for both bodies it is obtained with respect to the **a** body frame at the center of mass and with axes aligned with the principal axes of inertia. For the box this frame, represented in the world frame, is g_wA = g_box and for the jack this frame is g_wa = g_jack.
 
-The system is planar, therefore, there is no rotation about the x and y principal axes.
-Therefore, $J_1$ and $J_2$ terms of the inertia tensor do not contribute to the magnitude of kinetic energy and are represented as symbols in the code. The $J_3$ term for the box and the jack was computed using the inertia_box and inertia_jack functions in the code, respectively. For the jack,  
+    The system is planar, therefore, there is no rotation about the x and y principal axes.
+    Therefore, $J_1$ and $J_2$ terms of the inertia tensor do not contribute to the magnitude of kinetic energy and are represented as symbols in the code. The $J_3$ term for the box and the jack was computed using the inertia_box and inertia_jack functions in the code, respectively. For the jack,  
 
-$$
-J_3 = (4)\frac{1}{2} \frac{m}{4}(Lj/2)^2= \frac{1}{2}m(Lj/2)^2
-$$
+    $$
+    J_3 = (4)\frac{1}{2} \frac{m}{4}(Lj/2)^2= \frac{1}{2}m(Lj/2)^2
+    $$
 
-the moment of inertia of four point masses, each with mass $\frac{m}{4}$, about the z axis of the {a} frame. For the box,
+    the moment of inertia of four point masses, each with mass $\frac{m}{4}$, about the z axis of the {a} frame. For the box,
 
-$$
-J_3 = \frac{M}{12}[(2s^2)-(2t^2)]
-$$ 
+    $$
+    J_3 = \frac{M}{12}[(2s^2)-(2t^2)]
+    $$ 
 
-the inertia of a rectangular ring about the z axis of the frame {A} (1). Where, t is the thickness of the rectangular box segments.
+    the inertia of a rectangular ring about the z axis of the frame {A} (1). Where, t is the thickness of the rectangular box segments.
 
-The body angular velocity $V^b$ for both bodies was computed.  
+    The body angular velocity $V^b$ for both bodies was computed.  
 
-$$
-\hat{V}^b =(g^{-1}\dot{g})
-$$
+    $$
+    \hat{V}^b =(g^{-1}\dot{g})
+    $$
 
-For the box g = g_wA and for the jack g =g_wa. The calculation above maps the velocities in frame {w} to the velocities in frame {A} (box) or frame {a} jack. The unhat function in the code “unhats" the 4x4 matrix $\hat{V}^b$ to get an element of $ℝ^6$, the body velocity vector. The kinetic energy was then computed for both the box and the jack with the terms described above. Then, the resulting kinetic energies for both objects were added to compute the total kinetic energy of the system.
+    For the box g = g_wA and for the jack g =g_wa. The calculation above maps the velocities in frame {w} to the velocities in frame {A} (box) or frame {a} jack. The unhat function in the code “unhats" the 4x4 matrix $\hat{V}^b$ to get an element of $ℝ^6$, the body velocity vector. The kinetic energy was then computed for both the box and the jack with the terms described above. Then, the resulting kinetic energies for both objects were added to compute the total kinetic energy of the system.
 
 3. Computed the potential energy for each rigid body. To calculate the potential energy the y component of the {A} frame (for the box) and the {a} frame (for the jack) was extracted from the g_wA and g_wa matrices, respectively. Then, the potential energy was found using:  
 
