@@ -1,6 +1,6 @@
 ---
 title: "Infotaxis: Single Target Search"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+excerpt: " POST IN PROGRESS <br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
 

@@ -47,18 +47,6 @@ Table 1. Description and values of Sympy symbols used in the code
 | Lj| length of the rod of the jack in Figure one this value is represented as the distance between frames {b} and {c} and frame {d} and {e} | 0.5 m |
 | g | gravity | 9.8 (m/s) |
 
-| Header1 | Header2 | Header3 |
-|:--------|:-------:|--------:|
-| cell1   | cell2   | cell3   |
-| cell4   | cell5   | cell6   |
-|-----------------------------|
-| cell1   | cell2   | cell3   |
-| cell4   | cell5   | cell6   |
-|=============================|
-| Foot1   | Foot2   | Foot3   |
-
-
-
 ## Rigid Body Transformations
 Transformations were represented with SE(3). They were used to represent the
 configuration of the box and jack and to change the reference frame in which a vector or frame
@@ -67,7 +55,7 @@ transformations have the same labels as the ones listed below.
 ### Subscript Naming Convention
 * The frames are labeled so that the second subscript is the frame expressed relative to the first subscript. For example, g_wA represents frame {A} relative to frame {w}.
 * The homogenous representation of the origin of frame {A} relative to {w} is represented in column 4 of the matrix.
-* The orientation of frame {A} relative to {w} is represent by SO(3), the rows and columns of g_wA that are in bold below.
+* The orientation of frame {A} relative to {w} is represent by SO(3), the rows and columns of g_wA that are in bold below.  
 
 $$
 \begin{bmatrix}
@@ -107,74 +95,84 @@ g_Ee
 ## Calculation Steps
 ### Euler Lagrange Equations
 1. Chose the configuration q (define above).
-2. Computed the kinetic energy for each body, the jack and the box. 
+2. Computed the kinetic energy for each body, the jack and the box.   
+   
 $$
 \text{KE}=\frac{1}{2}(V^b)^T \begin{bmatrix} mI_{nxn} & 0\\ 0 & \mathbf{I} \\ \end{bmatrix} V^b
 $$
 
-$mI_{nxn}$ is the inertia due to mass translation for each body. The mass for both bodies is described above in Table 1. $\mathbf{I}$ is the rotational inertia (inertia tensor). The inertia tensor is
-diagonal $\mathbf{I} = \text{diag}(m,m,m,J_1,J_2,J_3)$ because for both bodies it is obtained with respect to the **a** body frame at the center of mass and with axes aligned with the principal axes of inertia. For the box this frame, represented in the world frame, is g_wA = g_box and for the jack this frame is g_wa = g_jack. 
+$mI_{nxn}$ is the inertia due to mass translation for each body. The mass for both bodies is described above in Table 1. $\mathbf{I}$ is the rotational inertia (inertia tensor). The inertia tensor is diagonal $\mathbf{I} = \text{diag}(m,m,m,J_1,J_2,J_3)$ because for both bodies it is obtained with respect to the **a** body frame at the center of mass and with axes aligned with the principal axes of inertia. For the box this frame, represented in the world frame, is g_wA = g_box and for the jack this frame is g_wa = g_jack. 
 
 The system is planar, therefore, there is no rotation about the x and y principal axes.
-Therefore, $J_1$ and $J_2$ terms of the inertia tensor do not contribute to the magnitude of kinetic
-energy and are represented as symbols in the code. The $J_3$ term for the box and the jack was
-computed using the inertia_box and inertia_jack functions in the code, respectively. For the
-jack,
+Therefore, $J_1$ and $J_2$ terms of the inertia tensor do not contribute to the magnitude of kinetic energy and are represented as symbols in the code. The $J_3$ term for the box and the jack was computed using the inertia_box and inertia_jack functions in the code, respectively. For the jack,  
+
 $$
 J_3 = (4)\frac{1}{2} \frac{m}{4}(Lj/2)^2= \frac{1}{2}m(Lj/2)^2
 $$
-the moment of inertia of four point masses, each with mass $\frac{m}{4}$, about the z axis of the {a} frame. For the box,  
+
+the moment of inertia of four point masses, each with mass $\frac{m}{4}$, about the z axis of the {a} frame. For the box,
+
 $$
 J_3 = \frac{M}{12}[(2s^2)-(2t^2)]
-$$
+$$ 
+
 the inertia of a rectangular ring about the z axis of the frame {A} (1). Where, t is the thickness of the rectangular box segments.
 
-The body angular velocity $V^b$ for both bodies was computed.
+The body angular velocity $V^b$ for both bodies was computed.  
+
 $$
 \hat{V}^b =(g^{-1}\dot{g})
 $$
-For the box g = g_wA and for the jack g =g_wa. The calculation above maps the velocities in
-frame {w} to the velocities in frame {A} (box) or frame {a} jack. The unhat function in the code “unhats" the 4x4 matrix $\hat{V}^b$ to get an element of $ℝ^6$, the body velocity vector. The kinetic energy was then computed for both the box and the jack with the terms described above. Then, the resulting kinetic energies for both objects were added to compute the total kinetic energy of the system.
 
-3. Computed the potential energy for each rigid body. To calculate the potential energy the y
-component of the {A} frame (for the box) and the {a} frame (for the jack) was extracted from
-the g_wA and g_wa matrices, respectively. Then, the potential energy was found using:
+For the box g = g_wA and for the jack g =g_wa. The calculation above maps the velocities in frame {w} to the velocities in frame {A} (box) or frame {a} jack. The unhat function in the code “unhats" the 4x4 matrix $\hat{V}^b$ to get an element of $ℝ^6$, the body velocity vector. The kinetic energy was then computed for both the box and the jack with the terms described above. Then, the resulting kinetic energies for both objects were added to compute the total kinetic energy of the system.
+
+1. Computed the potential energy for each rigid body. To calculate the potential energy the y component of the {A} frame (for the box) and the {a} frame (for the jack) was extracted from the g_wA and g_wa matrices, respectively. Then, the potential energy was found using:  
+
 $$
 V = M*g*py_{box} + m*g*py_{jack}
 $$
 
-4. Computed the Lagrangian for the system:
+2. Computed the Lagrangian for the system:  
+   
 $$
 L = KE - V
 $$
 
-5. Found the left-hand-side of the forced Euler-Lagrange Equations:
+3. Found the left-hand-side of the forced Euler-Lagrange Equations:   
+
 $$
 \frac{d}{dt}\frac{\partial{L}}{\partial{\dot{q}}} - \frac{\partial{L}}{\partial{q}}
 $$
 
 ### External Forces
-An external force is applied the box (cup) object of the system. This force is applied at the
-center of mass of the cup.
+An external force is applied the box (cup) object of the system. This force is applied at the center of mass of the cup.  
+
 $$
 \text{external force shaking the cup in the y } F_{ext} = \begin{bmatrix} 0 \\ F_y \\ 0\\ 0\\ 0\\ 0\\ \end{bmatrix}
 $$
-The $F_{ext}$ vector is the right-hand-side of the forced Euler-Lagrange Equations. The external force applied to the cup was:
+
+The $F_{ext}$ vector is the right-hand-side of the forced Euler-Lagrange Equations. The external force applied to the cup was:  
+
 $$
 F_{ext} = Mg - 10 * M * \cos{(5 * t)}
 $$
-The resulting equation of motion for the cup in the vertical direction:
+
+The resulting equation of motion for the cup in the vertical direction:  
+
 $$
 \ddot{y}_b = 10\cos{(5t)}
 $$
+
 This force was applied to oscillate the cup. The cosine term was included to invoke oscillation and the Mg term was included to counteract the force of gravity.
 
 ### Impact Update Laws
-To solve the impact update rule two sets of equations were used:
+To solve the impact update rule two sets of equations were used:  
+
 $$
 \frac{\partial{L}}{\partial{\dot{q}}} \left. \vphantom{\int_a^b} \right|_{\tau^-}^{\tau^+} = \lambda \frac{\partial{\phi}}{\partial{q}}  \\
 H = 0
 $$
+
 H is the Hamiltonian of the system, the energy update, and the equation above is the momentum update.
 
 The system described had 16 potential collisions. However, all 16 are not implemented
