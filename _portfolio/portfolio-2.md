@@ -1,33 +1,39 @@
 ---
 title: "Design and Control of Custom Autonomous Robot "
-excerpt: "I designed, built, and programmed a custom automous robot used for an animal-robot interaction task to examine spatial planning as it occurs in nature <br/><img src='/images/robot_overview.png'>"
+excerpt: "I designed, built, and programmed a custom automous robot used for an animal-robot interaction task to examine spatial planning as it occurs in nature.  
+<br/><img src='/images/robot_overview.png'>"
 collection: portfolio
 ---
 
 
-# Background
+## Background / Motivation
 Planning is the ability to forward simulate and evaluate possible future actions before making a decision. For mammalian and avian species, there are certain environments and circumstances where plan-based decision-making offers a significant advantage over the simpler but inflexible approach of habit-based decision-making [4]. For example, mammals like big cats engage in lengthy pursuit strategies involving stealth, picking paths where they anticipate they will not be seen given the future location of their moving quarry. This study seeks to uncover and investigate overt animal behaviors indicative of plan-based action selection in a naturalistic task. 
 
 Previous investigations into planning behavior and its neurophysiology have offered great insights into this cognitive ability. These include brain regions associated with planning and behaviors indicative of planning [4,6,7]. However, the exploration has been limited to artificial laboratory tasks, like T-choice experiments with limited choice points (nodes) and stationary rewards. These tasks are too simplistic and lead to an eventual shift to habit-based action selection [4, 7, 8].
 
 Our lab previously developed a computational simulation to investigate visually guided predator-prey interactions [4]. This task is a more complex, dynamic, and ecologically relevant behavioral task. In this simulation, a prey agent used a tree search algorithm to model plan-based action selection in 2-D environments to reach a goal and avoid a dynamic predator. This work revealed a selective benefit for planning in savanna-like environments.
 
-This computational work helped our lab determine the ideal ecological context to move beyond reductive platforms towards a real-world task that is more representative of the animal’s natural habitat and is dynamic enough to elicit planning. The focus of this abstract is twofold: develop a naturalistic and dynamic behavioral task for mice using a custom autonomous robot (termed Pufferbot) as a predator, and characterize specific overt behaviors that may be indicative of naturalistic planning.
+This computational work helped our lab determine the ideal ecological context to move beyond reductive platforms towards a real-world task that is more representative of the animal’s natural habitat and is dynamic enough to elicit planning. The focus of this project was to develop a naturalistic and dynamic behavioral task for mice using a custom autonomous robot (termed Pufferbot) as a predator.
 
-# Materials and Methods
-2.1 Experimental Setup
+## Materials and Methods
+
+### Experimental Setup / Environment 
 Our lab designed and constructed an experimental platform consisting of a large hexagonal arena 2.34 meters across, vertex to vertex. The space is discretized into 331 hexagonal cells, each 12.7 cm across. The habitat has magnetic obstacles that can be arranged in different configurations to emulate various environmental structures. There are four high-speed cameras above the habitat that are used to track the position of either agent, mouse or robot, at 90 Hz.
-2.3 Custom robot: Pufferbot
+
+### Custom robot: Pufferbot
 Due to the specific design and experimental requirements, the predator robot used in the experiment was custom-built. The differential drive robot is powered by the ESP-WROOM-32 Module and is driven by two geared DC motors with magnetic encoders. The robot is also equipped with three LEDs for detection and localization via the camera sensors. Additionally, the robot predator is equipped with a custom air puff mechanism that dispenses a burst of air when triggered for negative reinforcement and to elicit fear in the mice. The robot houses two custom PCBs. One provides the supporting circuitry for the microcontroller and the motor drivers, and the other powers the LEDs and components used for the puff mechanism.
-2.2 Experimental Task
+
+### Experimental Task
 The animal’s task for each episode is to traverse the habitat and reach a reward without capture. An aversive air puff delineates a “capture” from the Pufferbot. The puff is triggered if the distance between the Pufferbot and the subject falls below 2.5 cells (27.5 cm). Progression through the arena is controlled by automated doors that actuate when the mouse completes an episode by reaching the reward.
 2.3 Robot Behavior
 The robot predator starts each episode at a spawn cell: a cell not visible to the prey, in a region of the arena (1/3 of the total area) furthest from the door through which the mouse enters. During an episode, the robot has two states: if the mouse is visible to the robot it aggressively pursues the prey; otherwise, the robot explores the world.
-2.4 Robot Control
+
+### Robot Control
 The robot is fully autonomous to allow for repeatable and unbiased experimental results. The robot is designed to follow intermediate waypoints that make up a trajectory, created by an A* search algorithm [1], that leads to a specified destination.
 The controller is essentially a hybrid of P and PID control, where PID is used to regulate the heading of the robot, and a P-controller is used to correct along-track error (distance from target). This hybrid controller outputs the desired left and right wheel velocity for the differential drive mobile robot. This data is sent via wifi to the microcontroller, where a PD controller is used for motor speed control. The camera sensors mounted above the arena provide feedback about the robot state (used by the higher-level controller for motion planning), and the encoders are used for the speed control feedback (used by the lower-level motor controller).
 An algorithm inspired by the formula governing the gravitational force between two objects augments obstacle avoidance during motion planning. This algorithm repels the robot from occlusions by perturbing the desired heading angle of the robot, where the distance between the objects largely influences the magnitude of the perturbation.
-3 Results
+
+## Results
 The development of the robotic predator was an iterative process. The robot had to meet many design constraints: size, speed, and sensor restrictions. Additionally, the robot had to elicit a fear response in the mice to emulate the presence of a dynamic threat while meeting the safety regulations of NU Animal Care and Use Committee. Initially, the robot was designed to be small and quick to match the speed ratio found between predator and prey in terrestrial environments [4]. This initial design was inspired by the robots used in Half-Size Micromouse competitions. However, this small robot did not elicit a fear response in mice. Further iterations involved integrating an aversive stimulus into the chassis of the robot. The most effective solution was a custom air puff mechanism. Further issues were encountered, like stability and motor control issues, due to the size constraint and increased payload. Eventually, an optimized design was deployed, and thousands of trials have been collected from the arena with the robotic predator.
 The experimental protocol includes experiments with and without the robot in the same world configuration. In experiments with the robot, path rerouting upon line of sight of the robot was found, as opposed to experiments with no robot where the mice tend to repeat the same route. This observation suggests that the current robot induces fear in the mice and encourages flexible behavior. Additionally, a unique behavior, peeking, has been observed and increases in frequency during robot exposure. This behavior might suggest information sampling for belief state collapse to inform periods of deliberation associated with planning [7].
 4 Conclusion and Future Work
@@ -36,4 +42,6 @@ My future work will diverge from the neurophysiology investigation. The prelimin
 
 
 ## Resources 
-Assembly instructions for the robot can be found [here](https://github.com/cellworld/robot_assembly). Information about the cellworld system where the robot is deployed for animal-robot interaction experiments can be found [here](https://cellworld.github.io/)
+Assembly instructions for the robot can be found [here](https://github.com/cellworld/robot_assembly). 
+
+Information about the cellworld system where the robot is deployed for animal-robot interaction experiments can be found [here](https://cellworld.github.io/).
