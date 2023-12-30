@@ -166,47 +166,43 @@ $$
 \frac{\partial{L}}{\partial{\dot{q}}} \left. \vphantom{\int_a^b} \right|_{\tau^-}^{\tau^+} = \lambda \frac{\partial{\phi}}{\partial{q}}  \\
 H = 0
 $$
-H is the Hamiltonian of the system, the energy update, and the equation above is the momentum
-update.
+H is the Hamiltonian of the system, the energy update, and the equation above is the momentum update.
+
 The system described had 16 potential collisions. However, all 16 are not implemented
 each timestep. In the code, the impact_conditions function loops through each impact
-constraint and checks if any impacts are detected for the current state of the system. If impact
-is detected, then the impact equations above are solved for �̇ and �.
+constraint and checks if any impacts are detected for the current state of the system. If impact is detected, then the impact equations above are solved for $\dot{q}$ and $\lambda$.
+
 To define the impact constraint of the system the four mass frames {b}, {c}, {d}, {e} were
 defined relative to the {E} frame of the box. The x and y values were extracted from these
-transformations. They represent the x and y position of each mass of the jack relative to frame
-{E} of the box. Each mass of the jack has four constraints:
-� = x - 0,
-� = y – 0,
-� = x – s,
-� = y – s,
+transformations. They represent the x and y position of each mass of the jack relative to frame {E} of the box. Each mass of the jack has four constraints:
+$$
+\phi = x - 0,  \\
+\phi = y – 0,  \\
+\phi = x – s,  \\
+\phi  = y – s,  
+$$
 If the x or y coordinate of the origin of any mass frame was in contact (on the same line)
 as any of the box boundaries, then the impact was detected.
 
 ## Code Results Discussion
 The system is simulated for three seconds. In the simulation the jack is inside the box
-and is not in contact with the box at �Ä, the start of the simulation. The jack then falls due to the
-force of gravity on the jack and eventually collides with the bottom of the box. The box is also
-experiencing a downward gravitational force and an external force. This external force causes
-the box to oscillate in the vertical direction (y of box frame). When the jack collides with the 
-box, both objects experience an instantaneous change velocity due to the forces that they
-apply on each other. In total, 10 collisions are detected during the simulation.
+and is not in contact with the box at $t_0$, the start of the simulation. The jack then falls due to the force of gravity on the jack and eventually collides with the bottom of the box. The box is also experiencing a downward gravitational force and an external force. This external force causes the box to oscillate in the vertical direction (y of box frame). When the jack collides with the box, both objects experience an instantaneous change velocity due to the forces that they apply on each other. In total, 10 collisions are detected during the simulation.
+
 To justify the accuracy of the dynamics of the simulated system various tests were
 performed. First, the external force (the right-hand-side of the Forced Euler Lagrange
 Equations) was set to 0. Then, the Hamiltonian was plotted.
+
+<br/><img src='/images/fig2_port4.png' width='300px' height='200px'><br>
 Figure 2. Hamiltonian for the jack and box system with no external forces
+
 The Hamiltonian of the system is nearly constant. The behavior of the Hamiltonian is
-reasonable. The collisions in the system are elastic and there are no external forces, therefore,
-conservation laws tell us that Figure 2 above is the qualitative result expected.
-In addition, the trajectory of this system (with no external force) was plotted. This plot
-was used to check the Lagrangian of the system. It is easy to predict the expected trajectory of
-a rigid falling in gravity.
+reasonable. The collisions in the system are elastic and there are no external forces, therefore, conservation laws tell us that Figure 2 above is the qualitative result expected. In addition, the trajectory of this system (with no external force) was plotted. This plot was used to check the Lagrangian of the system. It is easy to predict the expected trajectory of a rigid falling in gravity.
+
+<br/><img src='/images/fig3_port4.png' width='300px' height='200px'><br>
 Figure 3. Box and jack system falling in gravity
+
 The behavior for this plot was also as expected the jack and the box are falling with a
-negative acceleration of 9.8 $m/s^2$.
-Another reason why the behavior of the system is reasonable is it is evident from the
-animation that when the jack collides with the box the jack exhibits a greater acceleration than
-the box. This is as expected because the jack is significantly lighter than the box. 
+negative acceleration of 9.8 $m/s^2$. Another reason why the behavior of the system is reasonable is it is evident from the animation that when the jack collides with the box the jack exhibits a greater acceleration than the box. This is as expected because the jack is significantly lighter than the box. 
 
 ## Resources 
 The code for this simulation is available upon request. 
