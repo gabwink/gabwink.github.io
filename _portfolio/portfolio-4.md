@@ -8,15 +8,17 @@ collection: portfolio
 
 ## Model of the System
 
-<br/><img src='/images/jackinbox.png' width='400px'><br>
+<div style="text-align: center;">
+    <br/><img src='/images/jackinbox.png' width='400px'><br>
+</div>
 Figure 1. Model of the jack in a cup system with all the frames that are utilized for the project
 
 ### System Assumptions
 1. All collisions between the cup and the jack are elastic impacts
 2. The mass of blue rods of the jack were assumed to be negligible. Therefore, jack is
 modeled as four identical point masses equidistant from frame {a}
-1. Both objects are modeled in gravity
-2. Assume simultaneous impact does not occur (if it does the code uses the first
+3. Both objects are modeled in gravity
+4. Assume simultaneous impact does not occur (if it does the code uses the first
 impact detected to solve the impact update equations).
 
 ### Configuration
@@ -138,7 +140,7 @@ $$
 L = KE - V
 $$
 
-3. Found the left-hand-side of the forced Euler-Lagrange Equations:   
+3. Found the left-hand-side of the forced Euler-Lagrange Equations:     
 
 $$
 \frac{d}{dt}\frac{\partial{L}}{\partial{\dot{q}}} - \frac{\partial{L}}{\partial{q}}
