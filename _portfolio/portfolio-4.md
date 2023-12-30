@@ -128,21 +128,21 @@ g_Ee
 
 3. Computed the potential energy for each rigid body. To calculate the potential energy the y component of the {A} frame (for the box) and the {a} frame (for the jack) was extracted from the g_wA and g_wa matrices, respectively. Then, the potential energy was found using:  
 
-$$
-V = M*g*py_{box} + m*g*py_{jack}
-$$
+    $$
+    V = M*g*py_{box} + m*g*py_{jack}
+    $$
 
 4. Computed the Lagrangian for the system:  
    
-$$
-L = KE - V
-$$
+    $$
+    L = KE - V
+    $$
 
 5. Found the left-hand-side of the forced Euler-Lagrange Equations:     
 
-$$
-\frac{d}{dt}\frac{\partial{L}}{\partial{\dot{q}}} - \frac{\partial{L}}{\partial{q}}
-$$
+    $$
+    \frac{d}{dt}\frac{\partial{L}}{\partial{\dot{q}}} - \frac{\partial{L}}{\partial{q}}
+    $$
 
 ### External Forces
 An external force is applied the box (cup) object of the system. This force is applied at the center of mass of the cup.  
