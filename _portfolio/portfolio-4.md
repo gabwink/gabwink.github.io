@@ -1,6 +1,7 @@
 ---
 title: "Dynamic System Simulation"
-excerpt: 
+excerpt: "Model of a jack in a cup. The cup is moved by external forces, causing the jack to bouce inside the cup.  
+<br/><img src='/images/jacksim.png' width='400'>"
 collection: portfolio
 ---
 ## Simulation 
