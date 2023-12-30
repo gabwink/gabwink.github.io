@@ -46,13 +46,12 @@ Table 1. Description and values of Sympy symbols used in the code
 | M | total mass of box | 100 kg |
 | m | total mass of jack |  1 kg |
 | s | side length of square box | 3 m |
-| Lj| length of the rod of the jack in Figure one this value is represented as the distance between frames {b} and {c} and frame {d} and {e} | 0.5 m |
+| Lj| length of the rod of the jack in Figure 1 this value is represented as the distance between frames {b} and {c} and frame {d} and {e} | 0.5 m |
 | g | gravity | 9.8 (m/s) |
 
 ## Rigid Body Transformations
 Transformations were represented with SE(3). They were used to represent the
-configuration of the box and jack and to change the reference frame in which a vector or frame
-is represented. The rigid body transformations are described below. In the code, the
+configuration of the box and jack and to change the reference frame in which a vector or frame is represented. The rigid body transformations are described below. In the code, the
 transformations have the same labels as the ones listed below.
 ### Subscript Naming Convention
 * The frames are labeled so that the second subscript is the frame expressed relative to the first subscript. For example, g_wA represents frame {A} relative to frame {w}.
@@ -128,19 +127,19 @@ $$
 
 For the box g = g_wA and for the jack g =g_wa. The calculation above maps the velocities in frame {w} to the velocities in frame {A} (box) or frame {a} jack. The unhat function in the code “unhats" the 4x4 matrix $\hat{V}^b$ to get an element of $ℝ^6$, the body velocity vector. The kinetic energy was then computed for both the box and the jack with the terms described above. Then, the resulting kinetic energies for both objects were added to compute the total kinetic energy of the system.
 
-1. Computed the potential energy for each rigid body. To calculate the potential energy the y component of the {A} frame (for the box) and the {a} frame (for the jack) was extracted from the g_wA and g_wa matrices, respectively. Then, the potential energy was found using:  
+3. Computed the potential energy for each rigid body. To calculate the potential energy the y component of the {A} frame (for the box) and the {a} frame (for the jack) was extracted from the g_wA and g_wa matrices, respectively. Then, the potential energy was found using:  
 
 $$
 V = M*g*py_{box} + m*g*py_{jack}
 $$
 
-2. Computed the Lagrangian for the system:  
+4. Computed the Lagrangian for the system:  
    
 $$
 L = KE - V
 $$
 
-3. Found the left-hand-side of the forced Euler-Lagrange Equations:     
+5. Found the left-hand-side of the forced Euler-Lagrange Equations:     
 
 $$
 \frac{d}{dt}\frac{\partial{L}}{\partial{\dot{q}}} - \frac{\partial{L}}{\partial{q}}
