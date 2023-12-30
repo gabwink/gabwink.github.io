@@ -114,71 +114,58 @@ jack,
 $$
 J_3 = (4)\frac{1}{2} \frac{m}{4}(Lj/2)^2= \frac{1}{2}m(Lj/2)^2
 $$
-the moment of inertia of four point masses, each with mass $\frac{m}{4}$, about the z axis of the {a} frame.
-For the box,  
-�^ = �
-12 [(2�R) − (2�R)]
-the inertia of a rectangular ring about the z axis of the frame {A} (1). Where, t is the thickness of
-the rectangular box segments.
-The body angular velocity �& for both bodies was computed.
-�
-i&=(�jQ�̇)
+the moment of inertia of four point masses, each with mass $\frac{m}{4}$, about the z axis of the {a} frame. For the box,  
+$$
+J_3 = \frac{M}{12}[(2s^2)-(2t^2)]
+$$
+the inertia of a rectangular ring about the z axis of the frame {A} (1). Where, t is the thickness of the rectangular box segments.
+
+The body angular velocity $V^b$ for both bodies was computed.
+$$
+\hat{V}^b =(g^{-1}\dot{g})
+$$
 For the box g = g_wA and for the jack g =g_wa. The calculation above maps the velocities in
-frame {w} to the velocities in frame {A} (box) or frame {a} jack. The unhat function in the code
-“unhats" the 4x4 matrix �
-i& to get an element of ℝ\ , the body velocity vector. The kinetic
-energy was then computed for both the box and the jack with the terms described above. Then,
-the resulting kinetic energies for both objects were added to compute the total kinetic energy
-of the system.
-1. Computed the potential energy for each rigid body. To calculate the potential energy the y
+frame {w} to the velocities in frame {A} (box) or frame {a} jack. The unhat function in the code “unhats" the 4x4 matrix $\hat{V}^b$ to get an element of $ℝ^6$, the body velocity vector. The kinetic energy was then computed for both the box and the jack with the terms described above. Then, the resulting kinetic energies for both objects were added to compute the total kinetic energy of the system.
+
+3. Computed the potential energy for each rigid body. To calculate the potential energy the y
 component of the {A} frame (for the box) and the {a} frame (for the jack) was extracted from
 the g_wA and g_wa matrices, respectively. Then, the potential energy was found using:
-V = M*g*py_box + m*g*py_jack
-1. Computed the Lagrangian for the system:
-� = �� – �
-1. Found the left-hand-side of the forced Euler-Lagrange Equations:
-�
-��
-��
-��̇
-− ��
-��
+$$
+V = M*g*py_{box} + m*g*py_{jack}
+$$
+
+4. Computed the Lagrangian for the system:
+$$
+L = KE - V
+$$
+
+5. Found the left-hand-side of the forced Euler-Lagrange Equations:
+$$
+\frac{d}{dt}\frac{\partial{L}}{\partial{\dot{q}}} - \frac{\partial{L}}{\partial{q}}
+$$
+
 ### External Forces
 An external force is applied the box (cup) object of the system. This force is applied at the
 center of mass of the cup.
-external force shaking the cup in the y �s(t =
-⎣
-⎢
-⎢
-⎢
-⎢
-⎡
-0
-�u
-0
-0
-0
-0 ⎦
-⎥
-⎥
-⎥
-⎥
-⎤
-The �s(t vector is the right-hand-side of the forced Euler-Lagrange Equations. The external
-force applied to the cup was:
-�s(t = �� − 10 ∗ � ∗ ���(5 ∗ �)
+$$
+\text{external force shaking the cup in the y } F_{ext} = \begin{bmatrix} 0 \\ F_y \\ 0\\ 0\\ 0\\ 0\\ \end{bmatrix}
+$$
+The $F_{ext}$ vector is the right-hand-side of the forced Euler-Lagrange Equations. The external force applied to the cup was:
+$$
+F_{ext} = Mg - 10 * M * \cos{(5 * t)}
+$$
 The resulting equation of motion for the cup in the vertical direction:
-�̈
-& = 10���(5�)
-This force was applied to oscillate the cup. The cosine term was included to invoke oscillation
-and the Mg term was included to counteract the force of gravity.
+$$
+\ddot{y}_b = 10\cos{(5t)}
+$$
+This force was applied to oscillate the cup. The cosine term was included to invoke oscillation and the Mg term was included to counteract the force of gravity.
+
 ### Impact Update Laws
 To solve the impact update rule two sets of equations were used:
-��
-��̇
-|�−�+ = � ��
-��
+$$
+\frac{\partial{L}}{\partial{\dot{q}}} \left. \vphantom{\int_a^b} \right|_{\tau^-}^{\tau^+} = \lambda \frac{\partial{\phi}}{\partial{q}}  \\
 H = 0
+$$
 H is the Hamiltonian of the system, the energy update, and the equation above is the momentum
 update.
 The system described had 16 potential collisions. However, all 16 are not implemented
@@ -216,7 +203,7 @@ was used to check the Lagrangian of the system. It is easy to predict the expect
 a rigid falling in gravity.
 Figure 3. Box and jack system falling in gravity
 The behavior for this plot was also as expected the jack and the box are falling with a
-negative acceleration of 9.8 m/s.
+negative acceleration of 9.8 $m/s^2$.
 Another reason why the behavior of the system is reasonable is it is evident from the
 animation that when the jack collides with the box the jack exhibits a greater acceleration than
 the box. This is as expected because the jack is significantly lighter than the box. 
