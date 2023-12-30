@@ -37,16 +37,25 @@ $$
 The locations of the origins of frames {A} and {a} relative to the world frame {w} are represented by $(x_{box}, y_{box})$ and $(x_{jack}, y_{jack})$, respectively. The origin of these frames are at
 the center of mass for the box and the jack. The $\theta$ configuration variable for the box and the jack is the planar rotation about the frames {A} and {a} relative to the world frame. A righthanded coordinate system in the xy plane is used, therefore, the positive z axis is out of the page (positive rotation ccw). In the code symbols are used to represent the geometry and mass of the system. These symbols are defined in the table below. 
 
-Table 1. Description and values of Sympy symbols used in the code
+Table 1. Description and values of Sympy symbols used in the code  
+
 | Symbol | Description | Value |
-|----------|----------|----------|
+|:--------|:-------:|--------:|
 | M | total mass of box | 100 kg |
 | m | total mass of jack |  1 kg |
 | s | side length of square box | 3 m |
 | Lj| length of the rod of the jack in Figure one this value is represented as the distance between frames {b} and {c} and frame {d} and {e} | 0.5 m |
 | g | gravity | 9.8 (m/s) |
 
-
+| Header1 | Header2 | Header3 |
+|:--------|:-------:|--------:|
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+|-----------------------------|
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+|=============================|
+| Foot1   | Foot2   | Foot3   |
 
 
 
