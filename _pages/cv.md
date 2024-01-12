@@ -18,11 +18,11 @@ Education
 
 Work experience
 ======
-* NORTHWESTERN UNIVERSITY GRADUATE STUDENT RESEARCHER
-* TEACHING ASSISTANT AT NORTHWESTERN UNIVERSITY
-* PHYSICS ED RESEARCH AT MICHIGAN STATE UNIVERSITY
-* TEACHING ASSISTANT AT MICHIGAN STATE UNIVERSITY
-* PINCKNEY COMMUNITY SCHOOLS ASSISTANT TEACHER
+* Northwestern University Graduate Student Researcher
+* Teaching Assistant at Northwestern University
+* Physics Ed Research at Michigan State University
+* Teaching Assistant at Michigan State University
+* Pinckney Community Schools Assistant Teacher
   
 
 Skills
@@ -53,11 +53,11 @@ Teaching
   
 Service and leadership
 ======
-* VOLUNTEER COORDINATOR FOR NORTHWESTERN CRB
-* NU MEGSS INCOMING STUDENT MENTOR
-* PINCKNEY COMMUNITY SCHOOLS COACH
-* PI TAU SIGMA HONOR SOCIETY MEMBER
-* OHIO UNIVERSITY VARSITY FIELD HOCKEY
+* Volunteer Coordinator for Northwestern CRB
+* NU MEGSS Incoming Student Mentor
+* Pinckney Community Schools Field Hockey Coach
+* Pi Tau Sigma Honor Society Member
+* Ohio University Varsity Field Hockey
   
 Awards
 =====
