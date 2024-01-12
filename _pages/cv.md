@@ -9,32 +9,29 @@ redirect_from:
 
 {% include base_path %}
 
+See [link](/files/Gabirelle%20Wink%20Resume%20Extended.pdf) for full, formalized resume.
+
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.S. in Mechanical Engineeering, Michigan State University, 2020
+* Ph.D in Mechnaical Engineering, Northwestern University, 2025 (expected)
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* NORTHWESTERN UNIVERSITY GRADUATE STUDENT RESEARCHER
+* TEACHING ASSISTANT AT NORTHWESTERN UNIVERSITY
+* PHYSICS ED RESEARCH AT MICHIGAN STATE UNIVERSITY
+* TEACHING ASSISTANT AT MICHIGAN STATE UNIVERSITY
+* PINCKNEY COMMUNITY SCHOOLS ASSISTANT TEACHER
   
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Adept with Windows, MacOS, and Linux
+* Proficient in C++, Python, MATLAB, Embedded Programming in C and MicroPython
+* Computed Aided Design, Electronic Design Automation, Microsoldering
+* Scientific Writing, Collaborative Research, Mentorship
+* Experimental Design, Animal Research, Data Analysis
 
 Publications
 ======
@@ -56,4 +53,18 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* VOLUNTEER COORDINATOR FOR NORTHWESTERN CRB
+* NU MEGSS INCOMING STUDENT MENTOR
+* PINCKNEY COMMUNITY SCHOOLS COACH
+* PI TAU SIGMA HONOR SOCIETY MEMBER
+* OHIO UNIVERSITY VARSITY FIELD HOCKEY
+  
+Awards
+=====
+* NDSEG Fellowship Award
+* Board of Trustees Scholarship Award
+* First Place Biomedical Device Innovation Tournament
+* Selected as an Engineering Distinguished Scholar
+* Department Award for Outstanding Undergraduate Learning Assistant
+
+
