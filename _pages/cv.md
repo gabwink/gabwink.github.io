@@ -29,7 +29,7 @@ Skills
 ======
 * Adept with Windows, MacOS, and Linux
 * Proficient in C++, Python, MATLAB, Embedded Programming in C and MicroPython
-* Computed Aided Design, Electronic Design Automation, Microsoldering
+* Computer Aided Design, Electronic Design Automation, Microsoldering
 * Scientific Writing, Collaborative Research, Mentorship
 * Experimental Design, Animal Research, Data Analysis
 
