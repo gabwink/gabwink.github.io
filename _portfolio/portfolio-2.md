@@ -10,7 +10,9 @@ collection: portfolio
 
 
 ## Resources 
-Presentation covering the project's motivation, along with detail about the control and design aspects of the robot can be found [here]().
+Presentation covering the project's motivation, along with detail about the control and design aspects of the robot can be found [here](https://gabwink.github.io/talks/2013-03-01-talk-1/).
+
+
 
 Assembly instructions for the robot can be found [here](https://github.com/cellworld/robot_assembly). 
 
