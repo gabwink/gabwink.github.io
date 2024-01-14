@@ -1,7 +1,7 @@
 ---
 title: "Mobile Manipulation CoppeliaSim Project"
 excerpt: "Project using CoppeliaSim and a physics simulator to simulate the interaction of a youBot picking up a block
-<br/><img src='/images/youBot.png' width='300'>"
+<br/><img src='/images/youBot.png' width='400'>"
 collection: portfolio
 ---
 
