@@ -1,12 +1,13 @@
 ---
 title: "Mobile Manipulation CoppeliaSim Project"
 excerpt: "Project using CoppeliaSim and a physics simulator to simulate the interaction of a youBot picking up a block
-<br/><img src='/images/youBout.png'>"
+<br/><img src='/images/youBot.png'>"
 collection: portfolio
 ---
 
-## Simulation
-<img src="https://github.com/gabwink/gabwink.github.io/raw/master/images/youBot.gif" alt="Alt Text" width="400">
+## Simulation Video 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TPil2lzcCqE" frameborder="0" allowfullscreen></iframe>
+
 
 ## Overview
 This software plans a trajectory for the end-effector of the youBot mobile manipulator (a mobile
