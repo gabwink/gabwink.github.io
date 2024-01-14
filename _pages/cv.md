@@ -20,7 +20,7 @@ Work experience
 ======
 * Northwestern University Graduate Student Researcher
 * Teaching Assistant at Northwestern University
-* Physics Ed Research at Michigan State University
+* Physics Education Research at Michigan State University
 * Teaching Assistant at Michigan State University
 * Pinckney Community Schools Assistant Teacher
   
