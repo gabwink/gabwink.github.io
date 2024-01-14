@@ -15,6 +15,7 @@ base with four mecanum wheels and a 5R robot arm), performs odometry as the chas
 and performs feedback control to drive the youBot to pick up a block at a specified location,
 carry it to a desired location, and put it down (3).
 
+The code and results from this project can be found [here](https://github.com/gabwink/RoboticManipulation/tree/main).
 
 ### Results Discussion:
 The youBot was able to achieve the task specified in the assignment description. One unexpected behavior encounter was sometime the block sometimes exhibited small vibrations after being grasped by the robot. This is an artifact of dynamic simulation. The results for each simulation are further described and located in the results directory.
@@ -51,5 +52,3 @@ The screencast software slowed down the simulation, therefore, the video demonst
 tics/core.py
 1. http://hades.mech.northwestern.edu/index.php/Mobile_Manipulation_Capstone 4. http://hades.mech.northwestern.edu/index.php/Modern_Robotics
 
-### Code
-The code and results from this project can be found [here](https://github.com/gabwink/RoboticManipulation/tree/main).
