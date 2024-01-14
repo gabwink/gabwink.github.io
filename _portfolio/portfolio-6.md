@@ -6,7 +6,7 @@ collection: portfolio
 ---
 
 ## Simulation
-<img src="https://github.com/gabwink/gabwink.github.io/raw/master/images/jackinbox.gif" alt="Alt Text" width="400">
+<img src="https://github.com/gabwink/gabwink.github.io/raw/master/images/youBot.gif" alt="Alt Text" width="400">
 
 ## Overview
 This software plans a trajectory for the end-effector of the youBot mobile manipulator (a mobile
