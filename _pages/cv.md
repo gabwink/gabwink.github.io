@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-See [link](/files/Gabirelle%20Wink%20Resume%20Extended.pdf) for full, formalized resume.
+See [link](/files/Gabrielle%20Wink%20Resume%20Extended.pdf) for full, formalized resume.
 
 Education
 ======
