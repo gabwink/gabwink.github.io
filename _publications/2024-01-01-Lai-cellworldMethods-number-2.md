@@ -3,7 +3,7 @@ title: "A robot-rodent interaction arena with adjustable spatial complexity for 
 collection: publications
 permalink: /publication/2024-01-01-Lai-cellworldMethods-number-2
 excerpt: ''
-date: 2024-02-27
+date: 2024-01-27
 venue: 'Cell Reports'
 paperurl: 'https://doi.org/10.1016/j.celrep.2023.113671'
 citation: 'Lai, A. T., Espinosa, G., Wink, G. E., Angeloni, C. F., Dombeck, D. A., & MacIver, M. A. (2024). A robot-rodent interaction arena with adjustable spatial complexity for ethologically relevant behavioral studies. Cell Reports, 43(2).'
