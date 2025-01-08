@@ -65,6 +65,6 @@ Awards
 * Board of Trustees Scholarship Award
 * First Place Biomedical Device Innovation Tournament
 * Selected as an Engineering Distinguished Scholar
-* Department Award for Outstanding Undergraduate Learning Assistant
+* MSU Department of Physics and Astronomy Award for Outstanding Undergraduate Teaching Assistant
 
 
