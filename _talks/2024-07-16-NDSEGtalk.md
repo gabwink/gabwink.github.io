@@ -7,13 +7,13 @@ venue: "5th Annual NDSEG Conference"
 date: 2024-07-16
 location: "New Orleans, LA, USA"
 ---
+A poster presentation showcasing the development of an adaptive animal-robot arena designed for ethologically relevant behavioral studies. 
+It includes results from a novel behavioral task that combines competitive interactions with complex environments. 
+This poster was presented at the 5th Annual NDSEG Conference.  More details about the conference can be found [here](https://ndseg.org/2024-conference).
 
-A presentation focusing on the development of an animal-robot interaction task, with a particular emphasis on the robot design and control.
-
-## Video
+## Poster
 
 [Download the PDF](/files/NDSEG_poster.pdf)
-
 
 <embed src="/files/NDSEG_poster.pdf" width="800" height="600" type="application/pdf">
 
