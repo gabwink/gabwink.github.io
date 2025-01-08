@@ -3,7 +3,7 @@ title: "Adaptive Animal-Robot Arena for Ethologically Relevant Behavioral Studie
 collection: talks
 type: "Poster Presentation"
 permalink: https://ndseg.org/2024-conference
-venue: "2-24 NDSEG Conference"
+venue: "5th Annual NDSEG Conference"
 date: 2024-07-16
 location: "New Orleans, LA, USA"
 ---

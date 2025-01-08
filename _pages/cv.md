@@ -19,11 +19,18 @@ Education
 Work experience
 ======
 * Northwestern University Graduate Student Researcher
+  * [Visit Lab Website](https://robotics.northwestern.edu/)
 * Teaching Assistant at Northwestern University
+  * Course: Scientific and Embedded Programming in Python Fall 2021
+  * [Visit Course Description](https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/224-experimental-engineering-I.html)
 * Physics Education Research at Michigan State University
+  * [Visit Lab Website](https://perl.natsci.msu.edu/research/index.aspx)
 * Teaching Assistant at Michigan State University
+  * Course: Physics for Scientists and Engineers II
+  * [Visit Course Website](https://msuperl.org/wikis/pcubed/doku.php?id=184_notes)
 * Pinckney Community Schools Assistant Teacher
-  
+* Teaching Assistant for the CHAMP: Math Program at Michigan State University
+  * [Visit Program Website](https://gifted.msu.edu/programs/academic-year-programs/champ)
 
 Skills
 ======
@@ -62,9 +69,9 @@ Service and leadership
 Awards
 =====
 * NDSEG Fellowship Award
-* Board of Trustees Scholarship Award
-* First Place Biomedical Device Innovation Tournament
-* Selected as an Engineering Distinguished Scholar
-* MSU Department of Physics and Astronomy Award for Outstanding Undergraduate Teaching Assistant
+* Board of Trustees Scholarship Award at Michigan State University
+* First Place Biomedical Device Innovation Tournament at Michigan State University
+* Selected as an Engineering Distinguished Scholar at Michigan State University
+* Michigan State University Department of Physics and Astronomy Award for Outstanding Undergraduate Teaching Assistant
 
 
