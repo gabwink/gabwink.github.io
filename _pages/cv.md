@@ -21,12 +21,12 @@ Work experience
 * Northwestern University Graduate Student Researcher
   * [Visit Lab Website](https://robotics.northwestern.edu/)
 * Teaching Assistant at Northwestern University
-  * Course: Scientific and Embedded Programming in Python Fall 2021
+  * Course: Scientific and Embedded Programming in Python 
   * [Visit Course Description](https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/224-experimental-engineering-I.html)
 * Physics Education Research at Michigan State University
   * [Visit Lab Website](https://perl.natsci.msu.edu/research/index.aspx)
 * Teaching Assistant at Michigan State University
-  * Course: Physics for Scientists and Engineers II
+  * Course: Physics for Scientists and Engineers II 
   * [Visit Course Website](https://msuperl.org/wikis/pcubed/doku.php?id=184_notes)
 * Pinckney Community Schools Assistant Teacher
 * Teaching Assistant for the CHAMP: Math Program at Michigan State University
