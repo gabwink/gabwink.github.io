@@ -14,7 +14,7 @@ See [link](/files/Gabrielle%20Wink%20Resume%20Extended.pdf) for full, formalized
 Education
 ======
 * B.S. in Mechanical Engineeering, Michigan State University, 2020
-* Ph.D in Mechnaical Engineering, Northwestern University, 2025 (expected)
+* Ph.D in Mechnaical Engineering, Northwestern University, Spring 2026 (expected)
 
 Work experience
 ======
@@ -22,7 +22,7 @@ Work experience
   * [Visit Lab Website](https://robotics.northwestern.edu/)
 * Teaching Assistant at Northwestern University
   * Course: Scientific and Embedded Programming in Python 
-  * [Visit Course Description](https://www.mccormick.northwestern.edu/mechanical/academics/courses/descriptions/224-experimental-engineering-I.html)
+  * [Visit Course Description](https://class-descriptions.northwestern.edu/4980/MEAS/MECH_ENG/33953)
 * Physics Education Research at Michigan State University
   * [Visit Lab Website](https://perl.natsci.msu.edu/research/index.aspx)
 * Teaching Assistant at Michigan State University
