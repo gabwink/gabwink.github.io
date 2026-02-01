@@ -30,7 +30,7 @@ Work experience
   * [Visit Course Website](https://msuperl.org/wikis/pcubed/doku.php?id=184_notes)
 * Pinckney Community Schools Assistant Teacher
 * Teaching Assistant for the CHAMP: Math Program at Michigan State University
-  * [Visit Program Website](https://gifted.msu.edu/programs/academic-year-programs/champ)
+  * [Visit Program Website](https://spartanyouth.msu.edu/resources/c/champ-cooperative-highly-accelerated-mathematics-program/)
 
 Skills
 ======

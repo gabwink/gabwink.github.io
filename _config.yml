@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Gabrielle Wink / Portfolio"
+title                    : "Gabrielle Wink / About Me"
 title_separator          : "-"
 name                     : &name "Gabrielle Wink"
 description              : &description "PhD Candidate at Noprthwestern University"
